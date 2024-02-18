@@ -20,7 +20,7 @@ class Base(DeclarativeBase):
     pass
 
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('ANIME_DB')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('ANIME_DB', "sqlite:///anime.db")
 db = SQLAlchemy(model_class=Base)
 db.init_app(app)
 

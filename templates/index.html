@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Top Airing Anime{% endblock %}
+
+{% block content %}
+<br>
+<div class="container">
+  <h1 class="heading">Top Airing Anime</h1>
+  <p class="description">Top 50 Airing Anime Series according to MyAnimeList</p>
+   
+ {% for anime in animes %}
+
+    <div class="card mb-3" style="max-width: 2000px;">
+        <div class="row g-0">
+          <div class="col-md-2">
+            <img src={{ anime.img_url }} class="img-fluid rounded-start" alt="anime poster">
+          </div>
+          <div class="col-md-10">
+            <div class="card-body">
+              <h5 class="card-title"> {{ anime.title }} </h5>
+                      <div class="rating">
+          <label>{{ anime.score }}</label>
+         <i class="fas fa-star star"></i>
+       </div>
+              <p class="card-text">{{ anime.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+          {% endfor %}
+
+  <a href="{{url_for('update_db')}}" button type="button" class="btn btn-outline-light">Update DB</a>
+
+    </div>
+<br>
+<br>
+{% endblock %}

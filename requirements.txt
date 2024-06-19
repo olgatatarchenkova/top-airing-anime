@@ -1,10 +1,10 @@
 Bootstrap_Flask==2.2.0
-Requests==2.31.0
-Werkzeug==3.0.0
-Flask==2.3.2
+Requests==2.32.3
+Werkzeug==3.0.3
+Flask==2.3.3
 flask_sqlalchemy==3.1.1
-SQLAlchemy==2.0.25
+SQLAlchemy==2.0.31
 beautifulsoup4==4.12.3
 python-dotenv==1.0.1
-gunicorn==21.2.0
+gunicorn==22.0.0
 psycopg2-binary==2.9.9
